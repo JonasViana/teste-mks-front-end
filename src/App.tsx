@@ -1,21 +1,28 @@
+import { useEffect, useState } from 'react';
+
 import Header from './components/Header/Header';
 import Produtos from './components/Produtos/Produtos';
 
 import axios from 'axios'
 
 type Products = {
-    id: number;
-    name: string;
-    brand: string;
-    description: string;
-    photo: string;
-    price: number
-  };
-  
-  type GetProductsResponse = {
-    data: Products[];
-  };
-  
+  id: number;
+  name: string;
+  brand: string;
+  description: string;
+  photo: string;
+  price: number
+};
+
+type GetProductsResponse = {
+  products: Products[];
+  count: number;
+};
+
+function App() {
+
+  const [products, setProducts] = useState<Products[]>([])
+
   async function getProducts() {
     try {
       // 👇️ const data: GetUsersResponse
@@ -27,7 +34,8 @@ type Products = {
           },
         },
       );
-  
+
+      setProducts(data.products)
       console.log(JSON.stringify(data, null, 4));
   
       // 👇️ "response status is: 200"
@@ -44,14 +52,14 @@ type Products = {
       }
     }
   }
-
-  getProducts();
-
-function App() {
+  useEffect(() => {
+    getProducts()
+    console.log(products)
+  },[])
   return (
     <div>
       <Header />
-      <Produtos   />
+      <Produtos products={products}/>
     </div>
   );
 }
