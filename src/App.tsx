@@ -4,10 +4,7 @@ import Header from './components/Header/Header';
 import Produtos from './components/Produtos/Produtos';
 
 
-
 import axios from 'axios'
-import SideBar from './components/SideBar/Sidebar';
-
 
 type Products = {
   id: number;
@@ -41,7 +38,7 @@ function App() {
 
       setProducts(data.products)
 
-  
+
       return data;
     } catch (error) {
       if (axios.isAxiosError(error)) {
@@ -55,12 +52,11 @@ function App() {
   }
   useEffect(() => {
     getProducts()
-  },[products])
+  }, [products])
   return (
     <div>
-      <SideBar />
       <Header />
-      <Produtos products={products}/>
+      <Produtos products={products} />
     </div>
   );
 }

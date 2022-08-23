@@ -37,6 +37,7 @@ export const Main = styled.div`
   button:hover{
     background-color: rgba(17, 6, 226, 1);
     transition: .3s;
+    cursor: pointer;
   }
 `
 
@@ -63,7 +64,7 @@ export const Name = styled.p`
 
 export const Products = styled.div`
   display: flex;
-  width: 60vw;
+  width: 50vw;
   flex-wrap: wrap;
-  height: 65vh;
+  height: 55vh;
 `

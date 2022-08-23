@@ -1,22 +1,21 @@
-import { useState } from "react"
-import {Side, Button} from './styles'
+import { Main, Carrinho, Total, ProdutoAdicionado } from "./styles"
 
-type Props = {
-    
-}
 
-const SideBar = (props: Props) => {
-
-    const [sideBar, setSidebar] = useState(false)
+const Sidebar = () => {
 
   return (
-    <div>
-        <Button><button onClick={() => setSidebar(!sideBar)}>show</button> </Button>
-        <Side className={sideBar.toString()}>
-            <p className={sideBar.toString()}>Jonas Mestre</p>
-        </Side>
-    </div>
+    <Main>
+      <Carrinho><p>Carrinho de compras</p></Carrinho>
+      <ProdutoAdicionado>
+
+      </ProdutoAdicionado>
+      <Total>
+        <p>Total:</p>
+        <button>Finalizar Compra</button>
+      </Total>
+    </Main>
+
   )
 }
 
-export default SideBar
+export default Sidebar
