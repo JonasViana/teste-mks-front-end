@@ -3,7 +3,11 @@ import { useEffect, useState } from 'react';
 import Header from './components/Header/Header';
 import Produtos from './components/Produtos/Produtos';
 
+
+
 import axios from 'axios'
+import SideBar from './components/SideBar/Sidebar';
+
 
 type Products = {
   id: number;
@@ -25,8 +29,8 @@ function App() {
 
   async function getProducts() {
     try {
-      // 👇️ const data: GetUsersResponse
-      const { data, status } = await axios.get<GetProductsResponse>(
+
+      const { data } = await axios.get<GetProductsResponse>(
         'https://mks-frontend-challenge-api.herokuapp.com/api/v1/products?page=1&rows=8&sortBy=id&orderBy=DESC',
         {
           headers: {
@@ -36,10 +40,7 @@ function App() {
       );
 
       setProducts(data.products)
-      console.log(JSON.stringify(data, null, 4));
-  
-      // 👇️ "response status is: 200"
-      console.log('response status is: ', status);
+
   
       return data;
     } catch (error) {
@@ -54,10 +55,10 @@ function App() {
   }
   useEffect(() => {
     getProducts()
-    console.log(products)
-  },[])
+  },[products])
   return (
     <div>
+      <SideBar />
       <Header />
       <Produtos products={products}/>
     </div>

@@ -8,6 +8,7 @@ export const Main = styled.main`
     justify-content: space-between;
     padding-left: 2rem;
     padding-right: 5rem;
+    height: 15vh;
 
     span{
         font-size: 40px;
