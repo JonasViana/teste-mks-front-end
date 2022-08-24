@@ -4,10 +4,7 @@ import Sidebar from '../SideBar/Sidebar'
 
 import { TiShoppingCart } from 'react-icons/ti'
 
-
-type Props = {}
-
-const Header = (props: Props) => {
+const Header = () => {
   const [sideBar, setSidebar] = useState(false)
 
   return (
@@ -15,16 +12,16 @@ const Header = (props: Props) => {
       {!sideBar && <Main>
         <p><span>MKS</span>Sistemas</p>
         <button onClick={() => setSidebar(!sideBar)}>
-          <TiShoppingCart /><strong>0</strong>
+          <TiShoppingCart />
         </button>
       </Main>}
       {sideBar &&
         <><Main>
           <p><span>MKS</span>Sistemas</p>
-          <button className='teste' onClick={() => setSidebar(!sideBar)}>
+          <button className='button' onClick={() => setSidebar(!sideBar)}>
             X
           </button>
-        </Main><Sidebar  /></>}
+        </Main><Sidebar /></>}
     </header>
   )
 }

@@ -1,59 +1,56 @@
 import styled from 'styled-components'
 
 export const Main = styled.main`
-  font-family: 'Montserrat';
-  display: flex;
-  background-color: #0f52ba;
   align-items: center;
+  background-color: #0f52ba;
+  display: flex;
+  font-family: 'Montserrat';
+  height: 15vh;
   justify-content: space-between;
   padding-left: 2rem;
- 
-  height: 15vh;
 
   span {
+    color: #ffffff;
     font-size: 40px;
     font-weight: 600;
-    color: #ffffff;
     margin-right: 0.5rem;
   }
   p {
+    color: #ffffff;
     font-weight: 300;
     font-size: 20px;
-    color: #ffffff;
   }
   button {
-    width: 90px;
-    height: 45px;
+    background-color: #ffffff;
     border: none;
     border-radius: 8px;
-    z-index: 10;
-    background-color: #ffffff;
     color: #000000;
+    height: 45px;
     margin-right: 2rem;
+    width: 90px;
+    z-index: 10;
   }
 
   button:hover {
-    pointer-events: stroke;
     background-color: #e1dddd;
-    transition: 0.4s;
     cursor: pointer;
+    pointer-events: stroke;
+    transition: 0.4s;
   }
 
-  .teste {
+  .button {
     border-radius: 50%;
     background-color: #000000;
     color: white;
     display: inline-block;
     height: 50px;
-    width: 50px;
     font-size: 28px;
+    width: 50px;
   }
 
-  .teste:hover {
+  .button:hover {
     background-color: #000000;
-    width: 60px;
     height: 60px;
+    width: 60px;
   }
 `
-
-export const CgClose = styled.main``

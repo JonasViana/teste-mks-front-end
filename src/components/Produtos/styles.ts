@@ -1,71 +1,67 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const Page = styled.div`
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
-  width: 100vw;
   height: 80vh;
+  width: 100vw;
 `
 
-
-
 export const Name = styled.p`
-  display: flex;
   align-items: center;
+  display: flex;
   height: 38px;
+  justify-content: space-around;
   margin-right: 3px;
   width: 218px;
-  justify-content: space-around;
 
-
-  span{
-    width: 90px;
-    height: 26px;
+  span {
     background-color: #373737;
+    border-radius: 5px;
+    color: #ffffff;
     font-weight: 700;
     font-size: 15px;
-    border-radius: 5px;
-    color: #FFFFFF;
-    padding: .2rem;
+    height: 26px;
+    padding: 0.2rem;
+    width: 90px;
   }
 `
 
 export const Products = styled.div`
   display: flex;
-  width: 70vw;
   flex-wrap: wrap;
   height: 75vh;
+  width: 60vw;
 
-  li{
+  li {
+    align-items: center;
+    display: flex;
     font-family: 'montserrat';
+    flex-direction: column;
     margin-right: 1rem;
     margin-top: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  img{
-    width: 147px;
-    height: 138px
-    ;
-  }
+    img {
+      height: 138px;
+      width: 147px;
+    }
 
-  button{
-    width: 218px;
-    height: 32px;
-    background-color: #0F52BA;
-    border: none;
-    border-radius: 0px 0px 8px 8px;
-    color: #FFFFFF;
-    font-family: 'montserrat';
-    font-weight: 600;
-    font-size: 14px;
-  }
+    button {
+      background-color: #0f52ba;
+      border: none;
+      border-radius: 0px 0px 8px 8px;
+      color: #ffffff;
+      height: 32px;
+      font-family: 'montserrat';
+      font-weight: 600;
+      font-size: 14px;
+      width: 218px;
+    }
 
-  button:hover{
-    background-color: rgba(17, 6, 226, 1);
-    transition: .3s;
-    cursor: pointer;
-  }
+    button:hover {
+      background-color: rgba(17, 6, 226, 1);
+      cursor: pointer;
+      transition: 0.3s;
+    }
   }
 `

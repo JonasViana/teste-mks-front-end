@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 
+import 'react-loading-skeleton/dist/skeleton.css'
+import Skeleton from 'react-loading-skeleton'
+
 import Header from './components/Header/Header';
 import Produtos from './components/Produtos/Produtos';
-
 
 import axios from 'axios'
 
@@ -55,10 +57,12 @@ function App() {
   useEffect(() => {
     getProducts()
   }, [products])
+
   return (
     <div>
       <Header />
-      <Produtos products={products} />
+      {products.length === 0 && <Skeleton count={30} />}
+      {products && <Produtos products={products} />}
     </div>
   );
 }

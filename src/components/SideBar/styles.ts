@@ -1,47 +1,47 @@
 import styled from 'styled-components'
 
 export const Main = styled.div`
+  align-items: center;
   background: #0f52ba;
   box-shadow: 0px 0px 0px 2px rgba(0, 0, 12, 0.22);
-  width: 55vh;
-  height: 100vh;
   display: flex;
-  justify-content: space-between;
+  font-family: 'montserrat';
   flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
   position: absolute;
   top: 0;
   right: 0;
-  font-family: 'montserrat';
+  width: 55vh;
 `
 export const Carrinho = styled.div`
-  width: 180px;
-  height: 56px;
+  color: white;
   font-size: 27px;
   font-weight: 700;
-  color: white;
+  height: 56px;
   padding-left: 2rem;
   padding-top: 1rem;
+  width: 180px;
 `
 export const Total = styled.div`
-
   p {
-    display: flex;
-    justify-content: space-around;  
-    font-family: 'montserrat';
-    font-size: 28px;
-    font-weight: 700;
     color: white;
     display: flex;
+    display: flex;
+    font-family: 'montserrat';
+    font-weight: 700;
+    font-size: 28px;
+    justify-content: space-around;
     padding-left: 2rem;
   }
   button {
-    width: 55vh;
-    height: 97px;
     background-color: black;
     color: white;
     font-family: 'montserrat';
     font-size: 28px;
     font-weight: 700;
+    height: 97px;
+    width: 55vh;
   }
 
   button:hover {
@@ -52,62 +52,61 @@ export const Total = styled.div`
 `
 
 export const ProdutoAdicionado = styled.div`
-width: 395px;
-height: 95px;
-background-color: #FFFFFF;
-border-radius: 8px;
-display: flex;
-align-items: center;
-justify-content: space-around;
-margin-left: .8rem;
-  img{
-    width: 50px;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  height: 95px;
+  justify-content: space-around;
+  width: 395px;
+  img {
     height: 60px;
+    width: 50px;
   }
 
-  strong{
+  strong {
     margin-left: 2rem;
   }
 
-  p{
+  p {
     margin-left: 5px;
     margin-right: 5px;
   }
 
-  .deleteProduct{
-    height: 30px;
-    width: 30px;
+  .deleteProduct {
     border-radius: 50%;
     border: none;
-    background-color:#000000;
-    color: #FFFFFF;
+    background-color: #000000;
+    color: #ffffff;
+    height: 30px;
     margin-bottom: 6rem;
+    width: 30px;
   }
 
-  .deleteProduct:hover{
+  .deleteProduct:hover {
     height: 35px;
     width: 35px;
   }
 
-  .addItem{
+  .addItem {
     border-radius: 8px;
     border: none;
     font-size: 20px;
   }
 
-  .addItem:hover{
+  .addItem:hover {
     background-color: #000000;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
-  .removeItem{
+  .removeItem {
     border-radius: 8px;
     border: none;
     font-size: 20px;
   }
 
-  .removeItem:hover{
+  .removeItem:hover {
     background-color: #000000;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 `

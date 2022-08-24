@@ -1,24 +1,16 @@
 
 import { Main, Carrinho, Total, ProdutoAdicionado } from "./styles"
 
-import { useContext, useState, useEffect } from 'react'
+import { useContext } from 'react'
 import { AddItemContext } from '../../context/AddItemContext'
 
 
 const Sidebar = () => {
-  let { itemName, itemPrice, itemPhoto, addProduct, setAddProduct, qntItem } = useContext(AddItemContext)
-
-  const [qntItems, setQtdItems] = useState(qntItem)
-
-  const [newItemPrice , setNewItemPrice] = useState(itemPrice)
-
-  useEffect(() => {
-    setAddProduct(false)
-  }, [setAddProduct])
+  let { itemName, itemPrice, itemPhoto, addProduct, setAddProduct, addedPrice, setAddedPrice, qntItems, setQntItems } = useContext(AddItemContext)
   return (
     <Main>
       <Carrinho><p>Carrinho de compras</p></Carrinho>
-      {addProduct === false &&  <Total>
+      {addProduct === false && <Total>
         <p>Total:</p>
         <button >Finalizar Compra</button>
       </Total>}
@@ -26,18 +18,20 @@ const Sidebar = () => {
         <img src={itemPhoto} alt="Foto Item Adicionado" />
         <p>{itemName}</p>
         <button className="addItem" onClick={() => {
-          setQtdItems(qntItems - 1)
-          setNewItemPrice(+newItemPrice - +itemPrice)
+          setQntItems(qntItems - 1)
+          setAddedPrice(+addedPrice - +itemPrice)
+          qntItems <= 0 && setQntItems(0)
+          qntItems <= 0 && setAddedPrice(0)
         }}>-</button><p>{qntItems}</p><button className="removeItem" onClick={() => {
-          setQtdItems(qntItems + 1)
-          setNewItemPrice(+newItemPrice + +itemPrice)
+          setQntItems(qntItems + 1)
+          setAddedPrice(+addedPrice + +itemPrice)
         }}>+</button>
-        <strong>R${newItemPrice }</strong>
+        <strong>R${itemPrice}</strong>
         <button onClick={() => {
           setAddProduct(false)
         }} className="deleteProduct">X</button>
       </ProdutoAdicionado><Total>
-          <p>Total: <strong>R${newItemPrice}</strong></p>
+          <p>Total: <strong>R${addedPrice}</strong></p>
           <button>Finalizar Compra</button>
         </Total></>}
     </Main>
