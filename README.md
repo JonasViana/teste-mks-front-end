@@ -33,4 +33,4 @@ Abra http://localhost:3000 para visualizá-lo no navegador.
 
 ## Deploy do projeto
 
-https://earnest-kangaroo-987c34.netlify.app/
+https://mks-front-end.netlify.app/
