@@ -32,7 +32,7 @@ const Sidebar = () => {
         }} className="deleteProduct">X</button>
       </ProdutoAdicionado><Total>
           <p>Total: <strong>R${addedPrice}</strong></p>
-          <button>Finalizar Compra</button>
+          <button onClick={() => setAddProduct(false)}>Finalizar Compra</button>
         </Total></>}
     </Main>
   )
