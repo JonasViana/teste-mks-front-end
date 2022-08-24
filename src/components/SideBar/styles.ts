@@ -19,7 +19,7 @@ export const Carrinho = styled.div`
   font-size: 27px;
   font-weight: 700;
   height: 56px;
-  padding-left: 2rem;
+  padding-right: 13rem;
   padding-top: 1rem;
   width: 180px;
 `

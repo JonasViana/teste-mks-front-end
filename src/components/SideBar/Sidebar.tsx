@@ -30,12 +30,12 @@ const Sidebar = () => {
         <button onClick={() => {
           setAddProduct(false)
         }} className="deleteProduct">X</button>
-      </ProdutoAdicionado><Total>
+      </ProdutoAdicionado>
+      <Total>
           <p>Total: <strong>R${addedPrice}</strong></p>
           <button onClick={() => setAddProduct(false)}>Finalizar Compra</button>
         </Total></>}
     </Main>
   )
 }
-
 export default Sidebar
