@@ -1,34 +1,48 @@
-import {Main, Name, Page, Products} from './styles'
+import { Name, Page, Products } from './styles'
 
 import { IoBagHandleSharp } from 'react-icons/io5'
 
+import {  useContext } from 'react'
+import { AddItemContext } from '../../context/AddItemContext'
+
+
 type Product = {
-  id:number;
-  name:string;
-  brand:string;
-  description:string;
-  photo:string;
-  price:number
+  id: number;
+  name: string;
+  brand: string;
+  description: string;
+  photo: string;
+  price: number
 }
 
 type ProdutoProps = {
   products: Product[]
 }
 
-const Produtos = (products:ProdutoProps) => {
+const Produtos = (products: ProdutoProps ) => {
+
+  const { setItemId,  setItemName,  setItemPrice,  setItemPhoto,  setAddProduct } = useContext(AddItemContext)
+
   return (
     <Page>
-       <Products>
-       {products.products.map((product) => (
-        <Main>
-          <img src={product.photo} alt="Imagem produto" />
-          <Name><p>{product.name}</p><span>R${product.price}</span></Name>
-          <button><IoBagHandleSharp/> Comprar</button>
-        </Main>
-      ))}
-       </Products>
+      <Products>
+        {products.products.map((product) => (
+          <li key={product.id}>
+            <img src={product.photo} alt="Imagem produto" />
+            <Name>{product.name}<span>R${product.price}</span></Name>
+            <button onClick={() => {
+              setItemId(product.id)
+              setItemName(product.name)
+              setItemPrice(product.price)
+              setItemPhoto(product.photo)
+              setAddProduct(true)
+            } } ><IoBagHandleSharp /> Comprar</button>
+          </li>
+        ))}
+      </Products>
     </Page>
   )
 }
 
 export default Produtos
+

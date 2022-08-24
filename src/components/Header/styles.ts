@@ -7,7 +7,7 @@ export const Main = styled.main`
   align-items: center;
   justify-content: space-between;
   padding-left: 2rem;
-  padding-right: 5rem;
+ 
   height: 15vh;
 
   span {
@@ -29,6 +29,7 @@ export const Main = styled.main`
     z-index: 10;
     background-color: #ffffff;
     color: #000000;
+    margin-right: 2rem;
   }
 
   button:hover {

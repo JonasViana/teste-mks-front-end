@@ -8,38 +8,7 @@ export const Page = styled.div`
   height: 80vh;
 `
 
-export const Main = styled.div`
-  width: 217px;
-  height: 285px;
-  font-family: 'montserrat';
-  margin-right: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  img{
-    width: 147px;
-    height: 138px
-    ;
-  }
 
-  button{
-    width: 218px;
-    height: 32px;
-    background-color: #0F52BA;
-    border: none;
-    border-radius: 0px 0px 8px 8px;
-    color: #FFFFFF;
-    font-family: 'montserrat';
-    font-weight: 600;
-    font-size: 14px;
-  }
-
-  button:hover{
-    background-color: rgba(17, 6, 226, 1);
-    transition: .3s;
-    cursor: pointer;
-  }
-`
 
 export const Name = styled.p`
   display: flex;
@@ -64,7 +33,39 @@ export const Name = styled.p`
 
 export const Products = styled.div`
   display: flex;
-  width: 50vw;
+  width: 70vw;
   flex-wrap: wrap;
-  height: 55vh;
+  height: 75vh;
+
+  li{
+    font-family: 'montserrat';
+    margin-right: 1rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  img{
+    width: 147px;
+    height: 138px
+    ;
+  }
+
+  button{
+    width: 218px;
+    height: 32px;
+    background-color: #0F52BA;
+    border: none;
+    border-radius: 0px 0px 8px 8px;
+    color: #FFFFFF;
+    font-family: 'montserrat';
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  button:hover{
+    background-color: rgba(17, 6, 226, 1);
+    transition: .3s;
+    cursor: pointer;
+  }
+  }
 `

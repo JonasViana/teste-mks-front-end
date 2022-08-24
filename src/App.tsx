@@ -20,6 +20,7 @@ type GetProductsResponse = {
   count: number;
 };
 
+
 function App() {
 
   const [products, setProducts] = useState<Products[]>([])
@@ -50,6 +51,7 @@ function App() {
       }
     }
   }
+
   useEffect(() => {
     getProducts()
   }, [products])

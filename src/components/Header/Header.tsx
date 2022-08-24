@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Sidebar from '../SideBar/Sidebar'
 
 import { TiShoppingCart } from 'react-icons/ti'
-import { CgClose } from 'react-icons/cg'
+
 
 type Props = {}
 
@@ -15,7 +15,7 @@ const Header = (props: Props) => {
       {!sideBar && <Main>
         <p><span>MKS</span>Sistemas</p>
         <button onClick={() => setSidebar(!sideBar)}>
-          <TiShoppingCart />0
+          <TiShoppingCart /><strong>0</strong>
         </button>
       </Main>}
       {sideBar &&
@@ -24,7 +24,7 @@ const Header = (props: Props) => {
           <button className='teste' onClick={() => setSidebar(!sideBar)}>
             X
           </button>
-        </Main><Sidebar /></>}
+        </Main><Sidebar  /></>}
     </header>
   )
 }
